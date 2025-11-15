@@ -310,7 +310,7 @@ export function RegistrationSection() {
                           Memproses...
                         </>
                       ) : (
-                        "Daftar Sekarang - HANYA Rp. 99,000"
+                        "Daftar Sekarang - HANYA Rp. 69,000"
                       )}
                     </Button>
 
