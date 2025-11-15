@@ -17,14 +17,6 @@ export const problemContent = {
             id: "problem-3",
 			text: "Referensi dan bahan ajar tersebar dalam berbagai format (PDF, Google Docs, video) sehingga sulit diorganisir dan dianalisis.",
         },
-        {
-            id: "problem-4",
-			text: "Kesulitan mengorganisir ide-ide kompleks dari berbagai sumber menjadi struktur yang jelas untuk karya ilmiah.",
-        },
-        {
-            id: "problem-5",
-			text: "Tidak tahu cara memanfaatkan teknologi AI seperti NotebookLM untuk mempercepat proses memahami dan menganalisis materi.",
-        },
     ],
 	conclusion: "Akibatnya, proses penelitian menjadi lambat, karya ilmiah tertunda, dan kualitas analisis kurang mendalam karena tidak sempat memahami semua referensi dengan baik.",
 	transition: "Tenang, terdapat solusi yang dapat membantu mengatasi permasalahan tersebut.",
