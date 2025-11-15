@@ -3,38 +3,34 @@
 
 export const specialOfferContent = {
 	title: "Penawaran Spesial untuk Anda",
-	normalPrice: "Rp 149.000",
-	currentPrice: "GRATIS",
+	normalPrice: "Rp 249.000",
+	currentPrice: "Rp 69.000",
 	bonus: [
-		"Live Demo Penggunaan AI",
+		"Live Demo Penggunaan NotebookLM",
 		"E-Sertifikat keikutsertaan",
 		"Rekaman video akses selamanya",
-		"Tanya jawab dengan pemateri berpengalaman",
-		"Akses tools AI canggih",
+		"Tanya jawab dengan AI Engineer & Researcher",
+		"Panduan lengkap fitur NotebookLM (audio, video, mind map, kuis)",
 	],
 	urgency: "Kuota terbatas. Jangan sampai kehabisan!",
 	cta: {
 		text: "Daftar Sekarang!",
-		link: "https://docs.google.com/forms/d/e/1FAIpQLSd4RabWcBBSRenuBIHphS-U795OahBIZPje4WW7GEovspEjjg/viewform?usp=header",
+		link: "s.id/ikutworkshop19",
 	},
 };
 
 // Framework Detail - Statement Penutup + CTA
 // Conversational, ringkas, dengan hook penutup
+// Bahasa semi formal yang menusuk dan memberikan efek emosi kuat
 
 export const closingStatementContent = {
-	title: "Bayangkan 30 Hari ke Depan",
+	title: "Bayangkan Diri Anda Setelah Menguasai NotebookLM",
 	visualization: [
-		"Karya ilmiah selesai dengan kualitas tinggi",
-		"Turnitin di bawah 20%, terbebas dari AI Detector",
-		"Referensi jurnal terindeks dan berkualitas",
-		"Framework penulisan untuk penelitian selanjutnya",
+		"Ratusan bahan ajar sudah dipahami dengan cepat melalui ringkasan audio NotebookLM",
+		"Referensi terorganisir rapi dalam peta pikiran yang jelas dan mudah diakses",
+		"Karya ilmiah berkualitas dengan laporan otomatis dan analisis mendalam",
+		"Percaya diri penuh karena setiap konsep tertanam kuat melalui fitur kuis NotebookLM",
 	],
-	callToAction: "Dan semuanya dimulai dari Anda, hari ini.",
-	cta: {
-		text: "Ikut Workshop Sekarang",
-		link: "https://docs.google.com/forms/d/e/1FAIpQLSd4RabWcBBSRenuBIHphS-U795OahBIZPje4WW7GEovspEjjg/viewform?usp=header",
-	},
 };
 
 interface PreviewImage {

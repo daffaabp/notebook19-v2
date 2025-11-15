@@ -3,10 +3,10 @@
 
 export const solutionContent = {
 	title: "Ini Solusinya",
-	productName: "Workshop Nasional Teknik Parafrase dan Penulisan Akademik yang Beretika",
-	description: "Panduan praktis yang bantu Anda menyelesaikan karya ilmiah berkualitas dengan AI — dari gap riset, penulisan natural, hingga publikasi jurnal terindeks.",
-	howItWorks: "Live demo langsung, framework terstruktur, dan akses tools AI yang bisa langsung dipraktikkan.",
-	keyPoint: "Teknik yang sudah membantu 945+ alumni dengan tingkat kelulusan sidang 99%.",
+	productName: "Workshop AI NotebookLM - Pahami Ratusan Bahan Ajar dan Referensi dengan Cepat",
+	description: "Panduan praktis menggunakan NotebookLM untuk memahami ratusan bahan ajar dan referensi dengan cepat — dari ringkasan audio, laporan otomatis, peta pikiran, ringkasan video, hingga pembuatan kuis interaktif.",
+	howItWorks: "Live demo langsung menggunakan NotebookLM, praktik mengunggah berbagai format dokumen, dan teknik mengorganisir informasi untuk menciptakan karya ilmiah berkualitas.",
+	keyPoint: "Workshop yang mengajarkan cara memanfaatkan teknologi AI Google Labs untuk mempercepat proses penelitian dan penulisan karya ilmiah.",
 	transition: "Lalu, apa saja yang akan Anda dapatkan?",
 };
 

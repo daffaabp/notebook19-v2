@@ -1,11 +1,14 @@
 "use client";
 
+import * as fbq from "@/lib/facebook-pixel";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { heroContent } from "../_contents/hero-content";
 
 export const Hero = () => {
 	return (
-		<section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50/50 py-12 md:py-16 lg:py-20">
+		<section className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50/50 pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-16 lg:pb-20">
 			{/* Background Elements */}
 			<div className="pointer-events-none absolute inset-0">
 				{/* Gradient Orbs */}
@@ -58,6 +61,29 @@ export const Hero = () => {
 								priority
 								sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
 							/>
+						</div>
+						{/* CTA Button Below Image */}
+						<div className="mt-6 text-center lg:text-left">
+							<Link
+								href="#registration"
+								onClick={(e) => {
+									e.preventDefault();
+									fbq.initiateCheckout();
+									const element = document.querySelector("#registration");
+									if (element) {
+										const offsetTop =
+											element.getBoundingClientRect().top + window.pageYOffset - 80;
+										window.scrollTo({
+											top: offsetTop,
+											behavior: "smooth",
+										});
+									}
+								}}
+								className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/25"
+							>
+								Daftar Sekarang
+								<ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+							</Link>
 						</div>
 					</div>
 				</div>

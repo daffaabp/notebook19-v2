@@ -228,8 +228,20 @@ export const Support = () => {
 							{/* CTA */}
 							<div className="text-center">
 								<Link
-									href={specialOfferContent.cta.link}
-									onClick={() => fbq.initiateCheckout()}
+									href="#registration"
+									onClick={(e) => {
+										e.preventDefault();
+										fbq.initiateCheckout();
+										const element = document.querySelector("#registration");
+										if (element) {
+											const offsetTop =
+												element.getBoundingClientRect().top + window.pageYOffset - 80;
+											window.scrollTo({
+												top: offsetTop,
+												behavior: "smooth",
+											});
+										}
+									}}
 									className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/25"
 								>
 									{specialOfferContent.cta.text}
@@ -248,7 +260,7 @@ export const Support = () => {
 							<h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
 								{closingStatementContent.title}
 							</h3>
-							<div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 max-w-2xl mx-auto">
+							<div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
 								{closingStatementContent.visualization.map((item, index) => (
 									<div key={index} className="flex items-start gap-2 text-left">
 										<Sparkles className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" strokeWidth={2} />
@@ -256,35 +268,7 @@ export const Support = () => {
 									</div>
 								))}
 							</div>
-							<p className="text-xl md:text-2xl font-semibold text-gray-900 mb-6">
-								{closingStatementContent.callToAction}
-							</p>
-							<Link
-								href={closingStatementContent.cta.link}
-								onClick={() => fbq.initiateCheckout()}
-								className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/25"
-							>
-								{closingStatementContent.cta.text}
-								<ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-							</Link>
 						</div>
-					</div>
-
-					{/* Terms & Privacy Links */}
-					<div className="mt-8 flex items-center justify-center gap-4 text-center">
-						<Link
-							href="/terms"
-							className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
-						>
-							Terms of Service
-						</Link>
-						<span className="text-gray-300">•</span>
-						<Link
-							href="/privacy"
-							className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
-						>
-							Privacy Policy
-						</Link>
 					</div>
 				</div>
 			</div>

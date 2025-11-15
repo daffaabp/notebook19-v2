@@ -7,10 +7,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const navigation = [
-	{ name: "Materi", href: "#features" },
-	{ name: "Pembicara", href: "#speakers" },
-	{ name: "Fasilitas", href: "#benefits" },
-	{ name: "Testimoni", href: "#testimonials" },	
+	{ name: "Tantangan", href: "#problem" },
+	{ name: "Manfaat", href: "#benefits" },
+	{ name: "Fasilitas", href: "#features" },
+	{ name: "Testimoni", href: "#testimonials" },
+	{ name: "Penawaran", href: "#support" },
+	{ name: "FAQ", href: "#faq" },
 ];
 
 export const Navbar = () => {
@@ -70,14 +72,14 @@ export const Navbar = () => {
 						/>
 					</Link>
 
-					<div className="hidden items-center gap-8 md:flex">
-						<div className="flex items-center gap-1">
+					<div className="hidden items-center gap-4 lg:gap-6 md:flex">
+						<div className="flex items-center gap-0.5 lg:gap-1">
 							{navigation.map((item) => (
 								<Link
 									key={item.name}
 									href={item.href}
 									onClick={(e) => handleClick(e, item.href)}
-									className="rounded-lg px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
+									className="rounded-lg px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium text-gray-600 transition-colors hover:text-gray-900 whitespace-nowrap"
 									aria-label={`Lihat ${item.name}`}
 								>
 									{item.name}
@@ -85,14 +87,26 @@ export const Navbar = () => {
 							))}
 						</div>
 
-						<Link
-							href="https://docs.google.com/forms/d/e/1FAIpQLSd4RabWcBBSRenuBIHphS-U795OahBIZPje4WW7GEovspEjjg/viewform?usp=header"
-							onClick={() => fbq.initiateCheckout()}
-							className="group inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-6 py-2 text-sm font-medium text-white transition-all hover:brightness-110"
-							aria-label="Daftar Kelas Sekarang"
-						>
-							Daftar Sekarang
-						</Link>
+					<Link
+						href="#registration"
+						onClick={(e) => {
+							e.preventDefault();
+							const element = document.querySelector("#registration");
+							if (element) {
+								const offsetTop =
+									element.getBoundingClientRect().top + window.pageYOffset - 80;
+								window.scrollTo({
+									top: offsetTop,
+									behavior: "smooth",
+								});
+							}
+							fbq.initiateCheckout();
+						}}
+						className="group inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-6 py-2 text-sm font-medium text-white transition-all hover:brightness-110"
+						aria-label="Daftar Workshop Sekarang"
+					>
+						Daftar Sekarang
+					</Link>
 					</div>
 
 					<button
@@ -140,11 +154,24 @@ export const Navbar = () => {
 							</Link>
 						))}
 						<Link
-							href="https://docs.google.com/forms/d/e/1FAIpQLSd4RabWcBBSRenuBIHphS-U795OahBIZPje4WW7GEovspEjjg/viewform?usp=header"
-							onClick={() => fbq.initiateCheckout()}
+							href="#registration"
+							onClick={(e) => {
+								e.preventDefault();
+								const element = document.querySelector("#registration");
+								if (element) {
+									const offsetTop =
+										element.getBoundingClientRect().top + window.pageYOffset - 80;
+									window.scrollTo({
+										top: offsetTop,
+										behavior: "smooth",
+									});
+								}
+								setIsMobileMenuOpen(false);
+								fbq.initiateCheckout();
+							}}
 							className="mt-4 block rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 px-4 py-3 text-center text-base font-medium text-white transition-all hover:brightness-110"
 							role="menuitem"
-							aria-label="Daftar Kelas Sekarang"
+							aria-label="Daftar Workshop Sekarang"
 						>
 							Daftar Sekarang
 						</Link>

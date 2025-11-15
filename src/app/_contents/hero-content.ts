@@ -3,16 +3,16 @@
 
 export const heroContent = {
     biggestGoal: {
-        title: "Bantu Dosen & Mahasiswa Menyelesaikan Karya Ilmiah Berkualitas",
+        title: "Pahami Secara Cepat Ratusan Bahan Ajar dan Referensi dengan NotebookLM",
         hook: [
-            "Lolos Turnitin di bawah 20%, terbebas dari AI Detector, dan publikasi jurnal terindeks — semua bisa Anda capai dengan teknik yang sudah terbukti.",
-            "Tanpa repot cari-cari referensi, tanpa khawatir plagiasi, dan tanpa harus belajar berbagai tools AI yang membingungkan.",
+            "Ciptakan karya ilmiah berkualitas dengan memanfaatkan fitur-fitur canggih NotebookLM — ringkasan audio, laporan otomatis, peta pikiran, ringkasan video, dan kuis interaktif.",
+            "Tingkatkan percaya diri penulisan Anda dengan fitur Audio Podcast dan Kuis NotebookLM. Tanpa repot membaca ratusan halaman manual, tanpa bingung mengorganisir referensi yang berantakan.",
         ],
         transition: "Tapi tunggu, mungkin Anda bertanya-tanya...",
     },
     image: {
-        src: "/images/banner26juli.png",
-        alt: "Rahasia Penulisan Karya Ilmiah Berkualitas dengan AI Tanpa Plagiasi",
+        src: "/images/banner.png",
+        alt: "Workshop AI NotebookLM - Pahami Ratusan Bahan Ajar dan Referensi dengan Cepat",
     },
 };
 
