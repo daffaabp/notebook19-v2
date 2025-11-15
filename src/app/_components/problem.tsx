@@ -21,7 +21,7 @@ export const Problem = () => {
 
 				{/* Problems list - Format list tanpa card, fokus readability */}
 				<div className="space-y-0">
-					{problemContent.content.map((problem, index) => (
+					{problemContent.content.map((problem) => (
 						<div
 							key={problem.id}
 							className="border-b border-gray-200 py-5 last:border-b-0"

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Gift, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 import "swiper/css";
 import "swiper/css/pagination";
